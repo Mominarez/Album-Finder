@@ -1,4 +1,4 @@
-#Album-Finder
+# Album-Finder
 
 This project is an album finder app built using the Spotify API, inspired by a tutorial on Codedex. I am enhancing the app with additional features and customizing it in my own style.
 
