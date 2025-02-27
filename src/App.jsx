@@ -97,9 +97,12 @@ function App() {
 
 
   return (
-    <Container>
-      <InputGroup>
+    <Container className = "main-container">
+      <h1 className="title">𓏲𝄢Melodex⋆˚࿔</h1>
+      {albums.length === 0 && (<h2 className="subtitle">Find albums from your favorite artists!</h2>)}
+      <InputGroup className = "search-bar-container"> 
         <FormControl
+          className = "search-bar"
           placeholder="Search For Artist"
           type="text"
           aria-label="Search for an Artist"
@@ -116,50 +119,20 @@ function App() {
             paddingLeft: "10px",
           }}
         />
-        <Button onClick={handleSearch}>Search</Button>
+        <Button className = "search-button" onClick={handleSearch}>Search</Button>
       </InputGroup>
 
 
-      <Row
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          justifyContent: "space-around",
-          alignContent: "center",
-          marginTop: "20px",
-        }}
-      >
+      <Row className = "album-container">
         {albums.map((album) => {
           const albumImage = album.images.length > 0 ? album.images[0].url : 'path/to/default/image.jpg'; //added error handling
           return (
-            <Card
-              key={album.id}
-              style={{
-                backgroundColor: "white",
-                margin: "10px",
-                borderRadius: "5px",
-                marginBottom: "30px",
-                width: "200px",
-              }}
-            >
-              <Card.Img
-                width={200}
-                src={albumImage}
-                style={{ borderRadius: '4%' }}
-                alt={`Album cover for ${album.name}`} //for accessibility
+            //organizing some of the styles to app.css
+            <Card key={album.id} className ="album-card"> 
+              <Card.Img src = {albumImage} className="album-img" alt={`Album cover for ${album.name}`} 
               />
               <Card.Body>
-                <Card.Title
-                  style={{
-                    whiteSpace: 'wrap',
-                    fontWeight: 'bold',
-                    maxWidth: '200px',
-                    fontSize: '18px',
-                    marginTop: '10px',
-                    color: 'black',
-                  }}
-                >
+                <Card.Title className="album-title">
                   {album.name}
                 </Card.Title>
 
@@ -170,16 +143,7 @@ function App() {
 
 
                 <Button
-                  href={album.external_urls.spotify}
-                  style={{
-                    backgroundColor: 'black',
-                    color: 'white',
-                    fontWeight: 'bold',
-                    fontSize: '15px',
-                    borderRadius: '5px',
-                    padding: '10px',
-                  }}
-                >
+                  href={album.external_urls.spotify} className="album-link">
                   Album Link
                 </Button>
               </Card.Body>

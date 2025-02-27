@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  padding-top: 20px;
 }
 
 .logo {
@@ -39,4 +40,142 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* -- centers the title and desc*/
+.main-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  height: 100vh; 
+  text-align: center;
+}
+
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #f37ae9;
+  margin-bottom: 0px;
+}
+
+.subtitle {
+  margin-top: 40px;;
+  font-size: 1.5rem;
+  color: #f37ae9;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+/* --- Search Bar Styles ---- */
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.search-bar {
+  width: 300px;
+  height: 40px;
+  border: 2px solid #050505;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-bar:focus {
+  border-color: #f37ae9; 
+  box-shadow: 0px 0px 8px rgba(243, 122, 233, 1);
+}
+
+.search-button {
+  background-color: #4A4A4A; 
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.search-button:hover {
+  background-color: #f37ae9; 
+}
+
+/*--Header styles--*/
+.title{
+  font-size: 3rem;
+  font-weight:bold;
+  color: #f37ae9;
+  text-align:center;
+  margin-bottom: 10px;
+}
+
+.subtitle{
+  font-size: 1.5rem;
+  color:#f37ae9;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/*--album card styles--*/
+.album-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  margin-top: 20px;
+  gap:5px;
+}
+
+.album-card {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 220px;
+}
+
+.album-img{
+ /* width=200
+  src={albumImage}
+  style={{ borderRadius: '4%' }}*/
+  margin: 0;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.album-title{
+  white-space: wrap;
+  font-weight: bold;
+  max-width: 200px;
+  font-size: 18px;
+  margin-top: 10px;
+  color: #4A4A4A; 
+}
+
+.album-link{
+  background-color: #4A4A4A; 
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 12px;
+  padding: 10px;
+  transition: background 0.3s ease-in-out;
+}
+
+.album-link:hover{
+  color: white !important; 
+  background-color: #f37ae9;
 }
